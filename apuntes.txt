@@ -1,0 +1,14 @@
+virtualenv env <- crear entorno virtual
+pip install django <- instalar django
+django-admin startproject <nombre>  <- crear proyecto de django
+
+pip freeze > requirements.txt <- generar archivo de dependencias
+pip install -r requirements.txt <- instalar dependencias
+
+py manage.py startapp social
+
+py manage.py migrate <- correr migraciones
+py manage.py makemigrations
+
+pip install Pillow <- si quieres usar imagenes en un server de django
+py manage.py sqlmigrate social 0001
